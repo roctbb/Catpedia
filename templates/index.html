@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Catpedia</title>
+</head>
+<body>
+<h2><span style="color:green;">Cat</span>pedia</h2>
+
+<ul>
+{% for i in range(cats|length) %}
+    <li><a href="/cat?id={{cats[i]['_id']}}">{{cats[i]['name']}}</a></li>
+{% endfor %}
+</ul>
+
+<p>
+    <a href="/add">Добавить</a>
+</p>
+
+
+</body>
+</html>
